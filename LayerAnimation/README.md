@@ -37,7 +37,7 @@
 
 如下的霓虹效果：
 
-
+![霓虹效果](https://github.com/winfredzen/iOS-Animation/blob/master/LayerAnimation/screenshot/CAEmitterLayer_Animation_1.gif)
 
 
 
