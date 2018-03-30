@@ -1,6 +1,6 @@
 # iOS-Animation
 
-iOS动画效果
+iOS动画效果，具体的内容可参考各个子文件夹
 
 ## CALayer
 
