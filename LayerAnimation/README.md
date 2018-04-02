@@ -40,9 +40,20 @@
 ![霓虹效果](https://github.com/winfredzen/iOS-Animation/blob/master/LayerAnimation/screenshot/CAEmitterLayer_Animation_1.gif)
 
 
+## CAGradientLayer渐变动画
+
+如下的类似于光波扫描的动画，是对`CAGradientLayer`做动画效果来实现：
+
+![光波扫描的动画](https://github.com/winfredzen/iOS-Animation/blob/master/LayerAnimation/screenshot/CAGradientLayer_Animation_1.gif)
 
 
+## CAShapeLayer动画
 
+如下的折线图和柱状图：
+
+![折线图](https://github.com/winfredzen/iOS-Animation/blob/master/LayerAnimation/screenshot/CAShapeLayer_Animation_1.gif)
+
+![柱状图](https://github.com/winfredzen/iOS-Animation/blob/master/LayerAnimation/screenshot/CAShapeLayer_Animation_2.gif)
 
 
 
