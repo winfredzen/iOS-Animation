@@ -10,6 +10,8 @@ import UIKit
 
 class CAShapeLayerDemo2VC: UIViewController {
 
+    @IBOutlet weak var contentView: BarChartView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

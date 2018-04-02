@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D78CC6472071C6900052C9E7 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CC6462071C6900052C9E7 /* BarChartView.swift */; };
 		D78D1F43206CC12300F39063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D1F42206CC12300F39063 /* AppDelegate.swift */; };
 		D78D1F45206CC12300F39063 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D1F44206CC12300F39063 /* ViewController.swift */; };
 		D78D1F48206CC12300F39063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78D1F46206CC12300F39063 /* Main.storyboard */; };
@@ -22,9 +23,11 @@
 		D7A00389206E2BB50043E14E /* CAGradientLayerDemo1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A00388206E2BB50043E14E /* CAGradientLayerDemo1VC.swift */; };
 		D7A0038B206E34090043E14E /* CAShapeLayerDemo1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0038A206E34090043E14E /* CAShapeLayerDemo1VC.swift */; };
 		D7A0038D206E34180043E14E /* CAShapeLayerDemo2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0038C206E34180043E14E /* CAShapeLayerDemo2VC.swift */; };
+		D7F3FDCC2071B94000A57F3F /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F3FDCB2071B94000A57F3F /* LineChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D78CC6462071C6900052C9E7 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		D78D1F3F206CC12300F39063 /* LayerAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayerAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78D1F42206CC12300F39063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D78D1F44206CC12300F39063 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		D7A00388206E2BB50043E14E /* CAGradientLayerDemo1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerDemo1VC.swift; sourceTree = "<group>"; };
 		D7A0038A206E34090043E14E /* CAShapeLayerDemo1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerDemo1VC.swift; sourceTree = "<group>"; };
 		D7A0038C206E34180043E14E /* CAShapeLayerDemo2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerDemo2VC.swift; sourceTree = "<group>"; };
+		D7F3FDCB2071B94000A57F3F /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		D78D1F41206CC12300F39063 /* LayerAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				D7F3FDCA2071B80000A57F3F /* view */,
 				D78D1F42206CC12300F39063 /* AppDelegate.swift */,
 				D78D1F44206CC12300F39063 /* ViewController.swift */,
 				D78D1F58206CC85100F39063 /* CAReplicatorLayerDemoVC.swift */,
@@ -92,6 +97,15 @@
 				D78D1F4E206CC12300F39063 /* Info.plist */,
 			);
 			path = LayerAnimation;
+			sourceTree = "<group>";
+		};
+		D7F3FDCA2071B80000A57F3F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D7F3FDCB2071B94000A57F3F /* LineChartView.swift */,
+				D78CC6462071C6900052C9E7 /* BarChartView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +183,7 @@
 				D7A00383206E0DBA0043E14E /* CAEmitterLayerDemo4VC.swift in Sources */,
 				D7A00381206DF22F0043E14E /* CAEmitterLayerDemo3VC.swift in Sources */,
 				D7A0037F206DEDDF0043E14E /* CAEmitterLayerDemo2VC.swift in Sources */,
+				D7F3FDCC2071B94000A57F3F /* LineChartView.swift in Sources */,
 				D7A00387206E18D60043E14E /* CAEmitterLayerDemo6VC.swift in Sources */,
 				D7A0037D206DDB790043E14E /* CAEmitterLayerDemo1VC.swift in Sources */,
 				D7A00385206E18C40043E14E /* CAEmitterLayerDemo5VC.swift in Sources */,
@@ -176,6 +191,7 @@
 				D78D1F45206CC12300F39063 /* ViewController.swift in Sources */,
 				D7A00389206E2BB50043E14E /* CAGradientLayerDemo1VC.swift in Sources */,
 				D78D1F43206CC12300F39063 /* AppDelegate.swift in Sources */,
+				D78CC6472071C6900052C9E7 /* BarChartView.swift in Sources */,
 				D7A0038D206E34180043E14E /* CAShapeLayerDemo2VC.swift in Sources */,
 				D78D1F59206CC85100F39063 /* CAReplicatorLayerDemoVC.swift in Sources */,
 			);

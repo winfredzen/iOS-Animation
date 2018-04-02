@@ -217,6 +217,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0E7-z9-TrW" kind="show" id="lJy-8G-n9f"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -246,6 +249,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8l-T8-ifG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3065" y="2010"/>
+        </scene>
+        <!--Shape Layer Demo2VC-->
+        <scene sceneID="tVi-sn-IeD">
+            <objects>
+                <viewController id="0E7-z9-TrW" customClass="CAShapeLayerDemo2VC" customModule="LayerAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Blx-dR-nUy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fiv-pU-eUR" customClass="BarChartView" customModule="LayerAnimation" customModuleProvider="target">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="11e-wi-RPh"/>
+                                    <constraint firstAttribute="height" constant="300" id="liq-3b-aAn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fiv-pU-eUR" firstAttribute="centerY" secondItem="Blx-dR-nUy" secondAttribute="centerY" id="BNn-gA-bYf"/>
+                            <constraint firstItem="Fiv-pU-eUR" firstAttribute="centerX" secondItem="Blx-dR-nUy" secondAttribute="centerX" id="I90-ZR-CO7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GQb-na-Bfy"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Fiv-pU-eUR" id="VqW-3y-MBZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpa-Bv-UbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3838" y="2009"/>
         </scene>
         <!--Gradient Layer Demo1VC-->
         <scene sceneID="Z4F-Oe-xdX">
@@ -417,7 +452,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqc-AF-Kk5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqc-AF-Kk5" customClass="LineChartView" customModule="LayerAnimation" customModuleProvider="target">
                                 <rect key="frame" x="37" y="183.5" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -434,7 +469,7 @@
                         <viewLayoutGuide key="safeArea" id="43G-hh-jtw"/>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="Wqc-AF-Kk5" id="ULe-em-ueZ"/>
+                        <outlet property="contentView" destination="Wqc-AF-Kk5" id="9Te-6e-9Cr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xd1-Sd-YQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
