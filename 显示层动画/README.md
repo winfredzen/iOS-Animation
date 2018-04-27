@@ -58,6 +58,7 @@ open class func animateKeyframes(withDuration duration: TimeInterval, delay: Tim
 
 如下的效果：
 
+![效果](https://github.com/winfredzen/iOS-Animation/blob/master/%E6%98%BE%E7%A4%BA%E5%B1%82%E5%8A%A8%E7%94%BB/images/1.gif)
 
 
 实现过程是这样的：
