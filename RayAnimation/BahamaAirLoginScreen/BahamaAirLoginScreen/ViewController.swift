@@ -94,6 +94,8 @@ class ViewController: UIViewController {
         loginButton.center.y += 30.0
         loginButton.alpha = 0.0
         
+
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -142,6 +144,12 @@ class ViewController: UIViewController {
         }, completion: nil)
         
         
+        //云朵漂移动画
+        animateCloud(cloud1)
+        animateCloud(cloud2)
+        animateCloud(cloud3)
+        animateCloud(cloud4)
+        
     }
     
     // MARK: further methods
@@ -182,6 +190,7 @@ class ViewController: UIViewController {
                     self.removeMessage(index: index)
                 } else {
                     //reset form
+                    self.resetForm()
                 }
             })
         }
@@ -196,6 +205,48 @@ class ViewController: UIViewController {
             self.status.center = self.statusPosition
             
             self.showMessage(index: index + 1)
+        }
+    }
+    
+    //重置
+    func resetForm() {
+        // status
+        UIView.transition(with: status, duration: 0.2, options: [.transitionCurlUp], animations: {
+            self.status.isHidden = true
+            self.status.center = self.statusPosition
+        }) { (_) in
+            
+        }
+        
+        //login button
+        UIView.animate(withDuration: 0.33, delay: 0.2, options: [], animations: {
+            
+            self.spinner.center = CGPoint(x: -20.0, y: 16.0)
+            self.spinner.alpha = 0.0
+            self.loginButton.backgroundColor = UIColor(red: 0.63, green: 0.84, blue: 0.35, alpha: 1.0)
+            self.loginButton.bounds.size.width -= 80.0
+            self.loginButton.center.y -= 60.0
+            
+        }) { (_) in
+            
+        }
+        
+    }
+    
+    //云朵动画
+    func animateCloud(_ cloud: UIImageView) {
+        let cloudSpeed = 60.0 / view.frame.size.width
+        let duration = (view.frame.size.width - cloud.frame.origin.x) * cloudSpeed
+        
+        UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: [.curveLinear], animations: {
+            
+            cloud.frame.origin.x = self.view.frame.size.width
+            
+        }) { (_) in
+            
+            cloud.frame.origin.x = -self.view.frame.size.width
+            self.animateCloud(cloud)
+            
         }
     }
     
