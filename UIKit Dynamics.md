@@ -71,5 +71,46 @@ let animator = UIDynamicAnimator(referenceView: view)
 animator.addBehavior(UIGravityBehavior(items: [orangeSquare]))
 ```
 
+效果如下：
+
+![重力动画](https://github.com/winfredzen/iOS-Animation/blob/master/images/001.gif)
+
+可以看见orangeSquare加速下落，超出了view的边界
+
+
+
+## UICollisionBehavior
+
+[UICollisionBehavior](https://developer.apple.com/documentation/uikit/uicollisionbehavior)表示碰撞，如下的例子：
+
+```swift
+let boundaryCollision = UICollisionBehavior(items: [whiteSquare, orangeSquare])
+boundaryCollision.translatesReferenceBoundsIntoBoundary = true
+animator.addBehavior(boundaryCollision)
+
+let bounce = UIDynamicItemBehavior(items: [orangeSquare])
+bounce.elasticity = 0.6 //弹性
+bounce.density = 200 //密度
+bounce.resistance = 2 //阻抗
+animator.addBehavior(bounce)
+
+//打开调试
+animator.setValue(true, forKey: "debugEnabled")
+```
+
+`translatesReferenceBoundsIntoBoundary`设置为true，表示使referenceView的border成为另一个边界
+
+![重力动画](https://github.com/winfredzen/iOS-Animation/blob/master/images/002.gif)
+
+
+
+
+
+
+
+
+
+
+
 
 
