@@ -20,3 +20,4 @@ RayAnimation/BahamaAirLoginScreen/BahamaAirLoginScreen.xcodeproj/project.xcworks
 RayAnimation/FlightInfo/Flight Info.xcodeproj/project.xcworkspace/xcuserdata/wangzhen.xcuserdatad/UserInterfaceState.xcuserstate
 RayAnimation/TransitionDemo/TransitionDemo/TransitionDemo.xcodeproj/project.xcworkspace/xcuserdata/wangzhen.xcuserdatad/UserInterfaceState.xcuserstate
 *.xcuserstate
+.DS_Store

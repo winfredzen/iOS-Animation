@@ -8,6 +8,7 @@
 
 + [UIKIT DYNAMICS](https://www.yudiz.com/uikit-dynamics/)
 + [UIKit Dynamics Tutorial: Getting Started](https://www.raywenderlich.com/2326-uikit-dynamics-tutorial-getting-started)
++ [UIKit Dynamics Tutorial](https://www.raywenderlich.com/2650-uikit-dynamics-tutorial)
 
 [UIDynamicAnimator](https://developer.apple.com/documentation/uikit/uidynamicanimator):
 
@@ -29,6 +30,10 @@ addBehavior(_ behavior: UIDynamicBehavior)	// To add a behavior
 removeBehavior(_ behavior: UIDynamicBehavior)	// To remove particular behavior
 removeAllBehaviors()
 ```
+
+[UIDynamicItemBehavior](https://developer.apple.com/documentation/uikit/uidynamicitembehavior):
+
+> A base dynamic animation configuration for one or more dynamic items.
 
 
 
@@ -104,11 +109,46 @@ animator.setValue(true, forKey: "debugEnabled")
 
 
 
+## UIFieldBehavior
 
+[UIFieldBehavior](https://developer.apple.com/documentation/uikit/uifieldbehavior)我的理解是类似于一种场域，参考：
 
++ [Dynamic animations: UIFieldBehavior](https://www.invasivecode.com/weblog/dynamic-animation-uifieldbehavior)
++ [UIFieldBehavior](https://nshipster.com/uifieldbehavior/)
 
+如下的代码，演示了compound behaviors，可以使你的behaviors更复杂
 
+```swift
+let parentBehavior = UIDynamicBehavior()
+let viewBehavior = UIDynamicItemBehavior(items: [whiteSquare])
+viewBehavior.density = 0.01
+viewBehavior.resistance = 10
+viewBehavior.friction = 0.0 //摩擦
+viewBehavior.allowsRotation = false
+parentBehavior.addChildBehavior(viewBehavior)
 
+let fieldBehavior = UIFieldBehavior.springField()
+fieldBehavior.addItem(whiteSquare)
+fieldBehavior.position = CGPoint(x: 150, y: 350)
+fieldBehavior.region = UIRegion(size: CGSize(width: 500, height: 500))
+parentBehavior.addChildBehavior(fieldBehavior)
+
+animator.addBehavior(parentBehavior)
+
+let delayTime = DispatchTime.now() + Double(Int64(2 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+DispatchQueue.main.asyncAfter(deadline: delayTime) {
+  let pushBehavior = UIPushBehavior(items: [whiteSquare], mode: .instantaneous)
+  pushBehavior.pushDirection = CGVector(dx: 0, dy: -1)
+  pushBehavior.magnitude = 0.3
+  animator.addBehavior(pushBehavior)
+}
+
+let attachment = UIAttachmentBehavior(item: orangeSquare, attachedToAnchor: CGPoint(x: 300, y: 100))
+attachment.length = 300
+animator.addBehavior(attachment)
+```
+
+![复合动画](https://github.com/winfredzen/iOS-Animation/blob/master/images/003.gif)
 
 
 
