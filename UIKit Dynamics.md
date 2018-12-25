@@ -152,5 +152,13 @@ animator.addBehavior(attachment)
 
 
 
+## UISnapBehavior
+
+可参考：
+
++ [UIKit Dynamics in the real world](https://medium.com/@raulriera/uikit-dynamics-in-the-real-world-ef0dfd924260)
+
+![UISnapBehavior](https://cdn-images-1.medium.com/max/800/1*UdZ9LSJ-nwdIQ0s-FJppNw.gif)
+
 
 
